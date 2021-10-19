@@ -1,0 +1,20 @@
+{
+    "name": "kristianlentino/watermark-fpdf",
+    "type": "library",
+    "require": {
+        "setasign/fpdi": "^2.3",
+        "setasign/fpdf": "^1.8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kristianlentino\\WatermarkFpdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kristian Lentino",
+            "email": "kristian.lentino@dieffetech.it"
+        }
+    ]
+}
