@@ -15,17 +15,18 @@ Esempio:
 
 			// import a page
 			$templateId = $fpdi->importPage($pageNo);
+			$size = $fpdi->getTemplateSize($templateId);
+			//set the new page to the size of the template
+			$fpdi->AddPage('',[$size['width'],$size['height']]);
 
-			$fpdi->AddPage();
-
-			// use the imported page and adjust the page size
-			$fpdi->useTemplate($templateId);
+			//the last parameter will adjust the size of the page
+			$fpdi->useTemplate($templateId, 0, 0, null, null, true);
 
 			// set alpha to semi-transparency
-			$fpdi->SetAlpha(0.3);
+			$fpdi->SetAlpha(0.5);
 			$fpdi->SetFont('Arial','B',80);
 			$fpdi->SetTextColor(188,190,190);
-			$fpdi->RotatedText(50,180,'Testo del watermark',45);
+			$fpdi->RotatedText(50,180,'Lavorofacile',45);
 			// set alpha to semi-transparency
 			$fpdi->SetAlpha(1);
 		}
